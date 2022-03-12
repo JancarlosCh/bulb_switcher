@@ -9,7 +9,12 @@
   align-items: center;
   font-family: 'Indie Flower',
 cursive;
-font-size: 50px;
+}
+
+h1 {
+  font-size: 50px;
+  color: whitesmoke;
+  text-align: center;
 }
 
 .switcher-container {
