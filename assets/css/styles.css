@@ -1,0 +1,49 @@
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #0C0D0B;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div {
+  padding: 10px;
+}
+
+#switcher {
+  display: none;
+}
+
+#switcher:checked +  .power::after{
+  left: 35px;
+}
+
+#switcher:checked + .power {
+  background: #94F2C8;
+}
+
+.power {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: 65px;
+  height: 33px;
+  background: #979797;
+  border-radius: 100px;
+}
+
+.power::after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  transform: .2s;
+}
