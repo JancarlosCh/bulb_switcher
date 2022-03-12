@@ -27,14 +27,23 @@ let switcher = document.getElementById("switcher")
  */
 switcher.addEventListener("change", checkSwitcher, false);
 
+var tac = document.getElementById("tac");
+var audio = document.getElementById("audio");
+
 /**
  * Esta función chequea el estado del switcher para saber si se encuentra apagada o encendida, una vez confirmado el estado, procede a encender o apagar la bombilla
  */
 function checkSwitcher() {
   var checked = switcher.checked;
   if (checked) {
+    tac.play()
+    audio.play()
     turnOn()
   } else {
+    tac.play()
     turnOff()
   }
 }
+
+
+
