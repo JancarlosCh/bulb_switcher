@@ -48,5 +48,5 @@ font-size: 50px;
   position: absolute;
   top: 4px;
   left: 4px;
-  transform: .2s;
+  transition: .2s;
 }
