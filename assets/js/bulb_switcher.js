@@ -20,30 +20,31 @@ const turnOff = () => {
 /**
  * Esta variable almacena el switcher de encendido y apagado de la bombilla
  */
-let switcher = document.getElementById("switcher")
+const switcher = document.getElementById("switcher")
 
 /**
  * Se pone en escucha switcher para capturar si su estado ha cambiado
  */
 switcher.addEventListener("change", checkSwitcher, false);
 
-var tac = document.getElementById("tac");
-var audio = document.getElementById("audio");
+/**
+ * Se instancian los audios para su posterior reproducción
+ */
+const tac = document.getElementById("tac");
+const power = document.getElementById("power");
 
 /**
  * Esta función chequea el estado del switcher para saber si se encuentra apagada o encendida, una vez confirmado el estado, procede a encender o apagar la bombilla
  */
 function checkSwitcher() {
-  var checked = switcher.checked;
+  let checked = switcher.checked;
   if (checked) {
     tac.play()
-    audio.play()
+    power.play()
     turnOn()
   } else {
     tac.play()
     turnOff()
   }
 }
-
-
 
